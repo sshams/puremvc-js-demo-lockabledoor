@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Lockable Door Demo</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="js/api/puremvc-1.0.1.min.js"></script>
+<script src="js/api/puremvc-statemachine.1.0.min.js"></script>
+    
+<script src="js/LockableDoor.js"></script>
+<script src="js/ApplicationFacade.js"></script>
+<script src="js/controller/StartupCommand.js"></script>
+<script src="js/controller/PrepModelCommand.js"></script>
+<script src="js/controller/PrepViewCommand.js"></script>
+<script src="js/controller/InjectFSMCommand.js"></script>
+<script src="js/controller/EnteringOpenedStateCommand.js"></script>
+<script src="js/controller/ChangedClosedStateCommand.js"></script>
+<script src="js/view/ApplicationMediator.js"></script>
+</head>
+<body>
+<div style="float:left;width:220px;"> 
+    <input type="button" value="Open" id="open" disabled />
+    <input type="button" value="Close" id="close" disabled  />
+    <input type="button" value="Lock" id="lock" disabled />
+    <input type="button" value="Unlock" id="unlock" disabled />
+    
+    <span id="stateLabel" style="width:191px">asfasfd</span>
+    
+    <div id="vStack" style="width:140px; height:190px;">
+    </div>
+</div>
+    
+<div style="float:left;width:310px;">
+    <textarea style="width:300px;height:220px;" id="consoleText"></textarea>
+</div>
+<div style="float:left"><input type="button" value="Clear Text" onclick="document.getElementById('consoleText').value = ''" /></div>
+    
+<script type="text/javascript">
+	window.onload = function() {
+        new LockableDoor();
+    }
+</script>
+</body>
+</html>
