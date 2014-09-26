@@ -18,7 +18,7 @@ puremvc.define(
         function ILockableDoor() {
             this.handleEvent = function(type){self.handleEvent(type)}
         }
-        this.viewComponent.delegate = new ILockableDoor();
+        this.viewComponent.setDelegate(new ILockableDoor());
     },
     
     handleEvent: function(type) {

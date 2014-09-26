@@ -65,6 +65,10 @@ puremvc.define(
     
     write: function(text) {
         this.consoleText.value += text;   
+    },
+    
+    setDelegate: function(delegate) {
+        this.delegate = delegate;   
     }
 },
 {
