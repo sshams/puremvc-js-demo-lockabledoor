@@ -46,7 +46,7 @@ puremvc.define(
                 this.viewComponent.setState(notification.getBody().name);
                 break;
             case ApplicationFacade.WRITE:
-                this.viewComponent.consoleText.value += notification.getBody();
+                this.viewComponent.write(notification.getBody());
                 break;
             default:
                 console.log(notification);
