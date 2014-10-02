@@ -16,7 +16,7 @@ puremvc.define(
     onRegister: function() {
         var self = this;
         function ILockableDoor() { 
-            this.handleEvent = function(type){self.handleEvent(type)}
+            this.handleEvent = function(type){self.handleEvent(type)};
         }
         this.viewComponent.setDelegate(new ILockableDoor());
     },
